@@ -1,0 +1,16 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="620" rx="46" fill="#071727"/>
+  <circle cx="690" cy="126" r="180" fill="#A6FF4D" fill-opacity=".1"/>
+  <circle cx="132" cy="474" r="160" fill="#46D9FF" fill-opacity=".12"/>
+  <rect x="210" y="178" width="480" height="306" rx="32" fill="#0C2A28" stroke="#A6FF4D" stroke-opacity=".6" stroke-width="5"/>
+  <path d="M284 254h142v84H284zM492 254h122v84H492zM330 390h238" stroke="#C8F3FF" stroke-opacity=".7" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M426 296h66M354 338v52M552 338v52M284 296h-80M614 296h82M450 178v-72M450 484v56" stroke="#46D9FF" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="204" cy="296" r="16" fill="#46D9FF"/>
+  <circle cx="696" cy="296" r="16" fill="#A6FF4D"/>
+  <circle cx="450" cy="106" r="16" fill="#46D9FF"/>
+  <circle cx="450" cy="540" r="16" fill="#A6FF4D"/>
+  <circle cx="282" cy="422" r="16" fill="#FFC15F"/>
+  <circle cx="620" cy="422" r="16" fill="#FFC15F"/>
+  <text x="68" y="94" fill="#F6FBFF" font-family="Sora, Segoe UI, sans-serif" font-size="54" font-weight="800">PCB Design</text>
+  <text x="70" y="142" fill="#91A8BA" font-family="Manrope, Segoe UI, sans-serif" font-size="26" font-weight="700">Customised PCB printing and embedded circuits</text>
+</svg>

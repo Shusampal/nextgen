@@ -1,0 +1,15 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="620" rx="46" fill="#061322"/>
+  <circle cx="230" cy="156" r="150" fill="#46D9FF" fill-opacity=".13"/>
+  <circle cx="694" cy="468" r="176" fill="#FFC15F" fill-opacity=".1"/>
+  <path d="M450 284l96 58-96 58-96-58 96-58z" fill="#0D263D" stroke="#46D9FF" stroke-width="5"/>
+  <path d="M354 342H210M546 342h144M450 284V158M450 400v92" stroke="#C8F3FF" stroke-opacity=".65" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="210" cy="342" r="54" fill="#0A1E31" stroke="#A6FF4D" stroke-width="5"/>
+  <circle cx="690" cy="342" r="54" fill="#0A1E31" stroke="#A6FF4D" stroke-width="5"/>
+  <circle cx="450" cy="158" r="54" fill="#0A1E31" stroke="#46D9FF" stroke-width="5"/>
+  <circle cx="450" cy="492" r="54" fill="#0A1E31" stroke="#46D9FF" stroke-width="5"/>
+  <path d="M170 342h80M650 342h80M410 158h80M410 492h80" stroke="#F6FBFF" stroke-opacity=".65" stroke-width="10" stroke-linecap="round"/>
+  <path d="M162 220c82-44 156-44 222 0s142 44 224 0" stroke="#46D9FF" stroke-opacity=".55" stroke-width="6" stroke-linecap="round" stroke-dasharray="14 16"/>
+  <text x="68" y="94" fill="#F6FBFF" font-family="Sora, Segoe UI, sans-serif" font-size="54" font-weight="800">Drone Simulation</text>
+  <text x="70" y="142" fill="#91A8BA" font-family="Manrope, Segoe UI, sans-serif" font-size="26" font-weight="700">Flight logic, control systems and testing guidance</text>
+</svg>

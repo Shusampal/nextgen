@@ -1,413 +1,652 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NextGen Engineering Solutions</title>
-  <meta
-    name="description"
-    content="NextGen Engineering Solutions offers final year B.Tech project guidance, embedded systems support, AI/ML mentoring, IoT development, viva documentation help, and placement-focused project delivery."
-  >
-  <meta
-    name="keywords"
-    content="NextGen Engineering Solutions, Final Year B.Tech Project Guidance, Electronics and Communication, Computer Science AI ML, Electrical Engineering, IoT Smart Systems, Data Analysis and Visualization, Arduino, Raspberry Pi, ESP32, ESP8266, Python, MATLAB, Embedded C, 3D Printing, Customised PCB Printing, Drone Simulation, Mini Major Projects, Publication Guidance"
-  >
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="scroll-progress" aria-hidden="true"></div>
-  <div class="cursor-glow" aria-hidden="true"></div>
-  <a
-    class="whatsapp-float"
-    href="https://wa.me/918789967749?text=Hello%20NextGen%20Engineering%20Solutions%2C%20I%20want%20project%20guidance."
-    target="_blank"
-    rel="noreferrer"
-    aria-label="Chat with NextGen Engineering Solutions on WhatsApp"
-  >
-    <svg viewBox="0 0 32 32" aria-hidden="true">
-      <path d="M16.03 3.2A12.73 12.73 0 0 0 5.1 22.45L3.42 28.6l6.3-1.65A12.72 12.72 0 1 0 16.03 3.2Zm0 2.32a10.4 10.4 0 0 1 8.85 15.88 10.42 10.42 0 0 1-13.95 3.18l-.45-.27-3.74.98 1-3.64-.3-.47A10.4 10.4 0 0 1 16.03 5.52Zm-4.2 4.86c-.23 0-.6.09-.92.44-.32.35-1.2 1.18-1.2 2.88 0 1.7 1.23 3.34 1.4 3.57.17.23 2.38 3.82 5.9 5.2 2.93 1.15 3.53.92 4.17.86.64-.06 2.05-.84 2.34-1.65.29-.81.29-1.5.2-1.65-.08-.15-.32-.23-.66-.4-.35-.17-2.05-1.01-2.37-1.12-.32-.12-.55-.17-.78.17-.23.35-.9 1.12-1.1 1.35-.2.23-.4.26-.75.09-.35-.17-1.46-.54-2.78-1.72-1.03-.92-1.72-2.05-1.92-2.4-.2-.35-.02-.54.15-.71.16-.15.35-.4.52-.6.17-.2.23-.35.35-.58.12-.23.06-.43-.03-.6-.09-.17-.78-1.88-1.07-2.57-.28-.67-.57-.58-.78-.59h-.67Z"/>
-    </svg>
-    <span>WhatsApp</span>
-  </a>
-  <div class="ambient ambient-one"></div>
-  <div class="ambient ambient-two"></div>
-  <div class="ambient ambient-three"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NextGen Engineering Solutions</title>
+    <meta
+      name="description"
+      content="NextGen Engineering Solutions offers final year B.Tech project guidance, embedded systems support, AI/ML mentoring, IoT development, viva documentation help, and placement-focused project delivery."
+    />
+    <meta
+      name="keywords"
+      content="NextGen Engineering Solutions, Final Year B.Tech Project Guidance, Electronics and Communication, Computer Science AI ML, Electrical Engineering, IoT Smart Systems, Data Analysis and Visualization, Arduino, Raspberry Pi, ESP32, ESP8266, Python, MATLAB, Embedded C, 3D Printing, Customised PCB Printing, Drone Simulation, Mini Major Projects, Publication Guidance"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/918789967749?text=Hello%20NextGen%20Engineering%20Solutions%2C%20I%20want%20project%20guidance."
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Chat with NextGen Engineering Solutions on WhatsApp"
+    >
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path
+          d="M16.03 3.2A12.73 12.73 0 0 0 5.1 22.45L3.42 28.6l6.3-1.65A12.72 12.72 0 1 0 16.03 3.2Zm0 2.32a10.4 10.4 0 0 1 8.85 15.88 10.42 10.42 0 0 1-13.95 3.18l-.45-.27-3.74.98 1-3.64-.3-.47A10.4 10.4 0 0 1 16.03 5.52Zm-4.2 4.86c-.23 0-.6.09-.92.44-.32.35-1.2 1.18-1.2 2.88 0 1.7 1.23 3.34 1.4 3.57.17.23 2.38 3.82 5.9 5.2 2.93 1.15 3.53.92 4.17.86.64-.06 2.05-.84 2.34-1.65.29-.81.29-1.5.2-1.65-.08-.15-.32-.23-.66-.4-.35-.17-2.05-1.01-2.37-1.12-.32-.12-.55-.17-.78.17-.23.35-.9 1.12-1.1 1.35-.2.23-.4.26-.75.09-.35-.17-1.46-.54-2.78-1.72-1.03-.92-1.72-2.05-1.92-2.4-.2-.35-.02-.54.15-.71.16-.15.35-.4.52-.6.17-.2.23-.35.35-.58.12-.23.06-.43-.03-.6-.09-.17-.78-1.88-1.07-2.57-.28-.67-.57-.58-.78-.59h-.67Z"
+        />
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="ambient ambient-three"></div>
 
-  <div class="page-shell">
-    <header class="site-header">
-      <a class="brand" href="#home" aria-label="NextGen Engineering Solutions home">
-        <img src="assets/logo.jpeg" alt="NextGen Engineering Solutions logo">
-        <div>
-          <p class="eyebrow">Engineering Solutions</p>
-          <h1>NextGen</h1>
-        </div>
-      </a>
-
-      <nav class="site-nav" aria-label="Primary">
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact Us</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="hero" id="home">
-        <div class="hero-copy">
-          <p class="hero-kicker">10+ Years of project guidance</p>
-          <h2>Build a final year project that feels industry ready.</h2>
-          <p class="hero-text">
-            Turn your ideas into industry-ready projects with end-to-end support for mini and major projects,
-            real-time implementation, viva preparation, documentation guidance, and resume-focused outcomes.
-          </p>
-
-          <div class="hero-actions">
-            <a class="button button-primary" href="#services">Explore Services</a>
-            <a class="button button-secondary" href="#contact">Talk on WhatsApp</a>
+    <div class="page-shell">
+      <header class="site-header">
+        <a
+          class="brand"
+          href="#home"
+          aria-label="NextGen Engineering Solutions home"
+        >
+          <img
+            src="assets/logo.jpeg"
+            alt="NextGen Engineering Solutions logo"
+          />
+          <div>
+            <p class="eyebrow">Engineering Solutions</p>
+            <h1>NextGen</h1>
           </div>
+        </a>
 
-          <div class="hero-trust">
-            <span>Real-time implementation</span>
-            <span>Viva ready</span>
-            <span>Placement support</span>
-          </div>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact Us</a>
+        </nav>
+      </header>
 
-          <ul class="hero-points">
-            <li>Arduino, Raspberry Pi, ESP32 / ESP8266, and IoT Systems</li>
-            <li>Python, MATLAB, Embedded C, 3D Printing, and PCB Support</li>
-            <li>AI/ML, Electrical, Electronics, and Smart Systems project mentoring</li>
-          </ul>
-        </div>
-
-        <div class="hero-visual">
-          <div class="glow-card">
-            <img src="assets/promo.jpeg" alt="NextGen Engineering Solutions final year B.Tech project guidance poster">
-          </div>
-        </div>
-      </section>
-
-      <section class="stats-grid" aria-label="Highlights">
-        <article class="stat-card">
-          <span>10+</span>
-          <p>Years of experience in project guidance and practical implementation.</p>
-        </article>
-        <article class="stat-card">
-          <span>4+</span>
-          <p>Core platforms including Arduino, Raspberry Pi, ESP32 / ESP8266, and IoT systems.</p>
-        </article>
-        <article class="stat-card">
-          <span>End-to-End</span>
-          <p>Support from ideation and development to viva, documentation, and placement readiness.</p>
-        </article>
-      </section>
-
-      <section class="tech-marquee" aria-label="Technologies we support">
-        <div class="marquee-track">
-          <span>Arduino</span>
-          <span>Raspberry Pi</span>
-          <span>ESP32</span>
-          <span>Python</span>
-          <span>MATLAB</span>
-          <span>Embedded C</span>
-          <span>AI / ML</span>
-          <span>IoT Systems</span>
-          <span>PCB Printing</span>
-          <span>Drone Simulation</span>
-          <span>Arduino</span>
-          <span>Raspberry Pi</span>
-          <span>ESP32</span>
-          <span>Python</span>
-          <span>MATLAB</span>
-          <span>Embedded C</span>
-          <span>AI / ML</span>
-          <span>IoT Systems</span>
-          <span>PCB Printing</span>
-          <span>Drone Simulation</span>
-        </div>
-      </section>
-
-      <section class="about-section" id="about">
-        <div class="section-heading">
-          <p class="eyebrow">About Us</p>
-          <h3>Transforming academic projects into industry-ready innovations</h3>
-        </div>
-
-        <div class="about-grid">
-          <div class="about-copy">
-            <p>
-              At NextGen Engineering Solutions, we are committed to transforming academic projects into
-              industry-ready innovations. With a team of individuals having 10+ years of experience in
-              engineering domains such as MATLAB, IoT, Embedded Systems, AI, and Data Analytics, we provide
-              end-to-end project guidance tailored for B.Tech students.
+      <main>
+        <section class="hero" id="home">
+          <div class="hero-copy">
+            <p class="hero-kicker">10+ Years of project guidance</p>
+            <h2>Build a final year project that feels industry ready.</h2>
+            <p class="hero-text">
+              Turn your ideas into industry-ready projects with end-to-end
+              support for mini and major projects, real-time implementation,
+              viva preparation, documentation guidance, and resume-focused
+              outcomes.
             </p>
-            <p>
-              Our mission is to bridge the gap between theoretical knowledge and real-world application by
-              offering hands-on learning, personalized mentorship, and practical exposure to modern technologies.
-            </p>
-            <p>
-              We have successfully guided numerous students in developing high-quality projects, improving their
-              technical confidence, and enhancing their career opportunities.
-            </p>
-          </div>
 
-          <article class="about-card">
-            <span class="card-icon">NG</span>
-            <h4>We Help You Build Your Career</h4>
-            <p>
-              We do not just guide projects. We help students build practical skills, stronger presentations,
-              and confidence for the next step in their career.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="services-section" id="services">
-        <div class="section-heading">
-          <p class="eyebrow">Services</p>
-          <h3>Domains, technologies, and support built around real student outcomes</h3>
-        </div>
-
-        <div class="services-grid">
-          <article class="service-card service-card-tall">
-            <span class="card-icon">EC</span>
-            <h4>Domains Covered</h4>
-            <ul>
-              <li>Electronics &amp; Communication</li>
-              <li>Computer Science (AI/ML)</li>
-              <li>Electrical Engineering</li>
-              <li>IoT &amp; Smart Systems</li>
-              <li>Data Analysis &amp; Visualization</li>
-            </ul>
-          </article>
-
-          <article class="service-card service-card-tall">
-            <span class="card-icon">HW</span>
-            <h4>Platforms</h4>
-            <ul>
-              <li>Arduino</li>
-              <li>Raspberry Pi</li>
-              <li>ESP32 / ESP8266</li>
-              <li>IoT Systems</li>
-            </ul>
-          </article>
-
-          <article class="service-card service-card-tall">
-            <span class="card-icon">SW</span>
-            <h4>Technologies</h4>
-            <ul>
-              <li>Python</li>
-              <li>MATLAB</li>
-              <li>Embedded C</li>
-              <li>3D Printing</li>
-              <li>Customised PCB Printing</li>
-              <li>Drone Simulation</li>
-            </ul>
-          </article>
-
-          <article class="service-card service-card-feature">
-            <span class="card-icon">OK</span>
-            <h4>Features</h4>
-            <ul>
-              <li>End-to-End Project Support</li>
-              <li>Real-Time Implementation</li>
-              <li>Viva &amp; Documentation Guidance</li>
-              <li>Resume &amp; Placement Support</li>
-            </ul>
-          </article>
-
-          <article class="service-card service-card-feature feature-callout">
-            <span class="card-icon">PG</span>
-            <h4>Special Guidance</h4>
-            <ul>
-              <li>Mini + Major Projects</li>
-              <li>DIY &amp; Innovation-Based Learning</li>
-              <li>Publication Guidance</li>
-            </ul>
-          </article>
-
-          <article class="service-card service-card-story">
-            <span class="card-icon">NG</span>
-            <h4>Why Students Choose NextGen</h4>
-            <p>
-              We blend technical mentoring with practical execution so students can present stronger projects,
-              understand their work deeply, and build confidence for interviews, reviews, and placements.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="gallery-section" aria-label="Project Gallery">
-        <div class="section-heading">
-          <p class="eyebrow">Project Gallery</p>
-          <h3>Visual project tracks for practical engineering builds</h3>
-        </div>
-
-        <div class="gallery-grid">
-          <article class="gallery-card">
-            <img src="assets/project-ai.svg" alt="AI and machine learning project illustration">
-            <div>
-              <span>AI / ML</span>
-              <h4>Data-driven final year projects</h4>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#services"
+                >Explore Services</a
+              >
+              <a class="button button-secondary" href="#contact"
+                >Talk on WhatsApp</a
+              >
             </div>
-          </article>
-          <article class="gallery-card">
-            <img src="assets/project-iot.svg" alt="IoT systems project illustration">
-            <div>
-              <span>IoT Systems</span>
-              <h4>Connected hardware and sensor builds</h4>
+
+            <div class="hero-trust">
+              <span>Real-time implementation</span>
+              <span>Viva ready</span>
+              <span>Placement support</span>
             </div>
-          </article>
-          <article class="gallery-card">
-            <img src="assets/project-pcb.svg" alt="PCB design project illustration">
-            <div>
-              <span>PCB Design</span>
-              <h4>Embedded circuits and custom boards</h4>
-            </div>
-          </article>
-          <article class="gallery-card">
-            <img src="assets/project-drone.svg" alt="Drone simulation project illustration">
-            <div>
-              <span>Drone Simulation</span>
-              <h4>Control systems and flight simulation</h4>
-            </div>
-          </article>
-        </div>
-      </section>
 
-      <section class="process-section" aria-label="Process">
-        <div class="section-heading">
-          <p class="eyebrow">How We Work</p>
-          <h3>A guided path from idea to final presentation</h3>
-        </div>
-
-        <div class="process-grid">
-          <article class="process-card">
-            <strong>01</strong>
-            <h4>Project Planning</h4>
-            <p>Select the right domain, define your scope, and shape an innovation-focused concept.</p>
-          </article>
-          <article class="process-card">
-            <strong>02</strong>
-            <h4>Build &amp; Implement</h4>
-            <p>Develop hardware, software, AI/ML, embedded systems, or IoT solutions with real-time support.</p>
-          </article>
-          <article class="process-card">
-            <strong>03</strong>
-            <h4>Document &amp; Present</h4>
-            <p>Get help with reports, viva preparation, publication guidance, and placement-ready storytelling.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="process-section automation-section" aria-label="Automation Pipeline">
-        <div class="section-heading">
-          <p class="eyebrow">Automation Layer</p>
-          <h3>Website form to Google Sheets, follow-up, and student tracking</h3>
-        </div>
-
-        <div class="pipeline-grid">
-          <article class="pipeline-card">
-            <strong>01</strong>
-            <h4>Website Form</h4>
-            <p>Students submit their name, contact, branch, degree, domain, and project requirement from the website.</p>
-          </article>
-          <article class="pipeline-card">
-            <strong>02</strong>
-            <h4>Google Forms / Custom Form</h4>
-            <p>The contact form can connect to a Google Apps Script endpoint or an embedded Google Form flow.</p>
-          </article>
-          <article class="pipeline-card">
-            <strong>03</strong>
-            <h4>Google Sheets Database</h4>
-            <p>Every form entry is stored in Google Sheets with timestamps for lead tracking and student follow-up.</p>
-          </article>
-          <article class="pipeline-card">
-            <strong>04</strong>
-            <h4>Automation Layer</h4>
-            <p>Apps Script can trigger confirmation emails, WhatsApp workflow hooks, and status updates automatically.</p>
-          </article>
-          <article class="pipeline-card">
-            <strong>05</strong>
-            <h4>WhatsApp + Email + Lead Tracking</h4>
-            <p>Track discussions, send quick replies, and monitor enquiry status for in-progress or completed projects.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="contact-section" id="contact">
-        <div class="section-heading">
-          <p class="eyebrow">Contact Us</p>
-          <h3>Start your final year project with a strong technical partner</h3>
-        </div>
-
-        <div class="contact-grid">
-          <article class="contact-card">
-            <h4>Email</h4>
-            <a href="mailto:nextgenengineeringsolutions.p@gmail.com">nextgenengineeringsolutions.p@gmail.com</a>
-          </article>
-          <article class="contact-card">
-            <h4>WhatsApp</h4>
-            <a href="https://wa.me/918789967749" target="_blank" rel="noreferrer">+91 87899 67749</a>
-          </article>
-          <article class="contact-card">
-            <h4>Best For</h4>
-            <p>Final year B.Tech students looking for practical, impressive, and presentation-ready projects.</p>
-          </article>
-        </div>
-
-        <form class="contact-form" id="leadForm">
-          <div class="form-intro">
-            <p class="eyebrow">Website Form</p>
-            <h4>Tell us about your project idea</h4>
-            <p>Your entry can be recorded in Google Sheets and followed up through WhatsApp, email, and lead tracking.</p>
+            <ul class="hero-points">
+              <li>Arduino, Raspberry Pi, ESP32 / ESP8266, and IoT Systems</li>
+              <li>Python, MATLAB, Embedded C, 3D Printing, and PCB Support</li>
+              <li>
+                AI/ML, Electrical, Electronics, and Smart Systems project
+                mentoring
+              </li>
+            </ul>
           </div>
-          <label>
-            Name
-            <input type="text" name="name" placeholder="Your name" required>
-          </label>
-          <label>
-            Phone or WhatsApp
-            <input type="text" name="phone" placeholder="Your contact number" required>
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" placeholder="Your email address">
-          </label>
-          <label>
-            Domain
-            <input type="text" name="domain" placeholder="AI/ML, IoT, Embedded, Electrical..." required>
-          </label>
-          <label>
-            Branch
-            <input type="text" name="branch" placeholder="CSE, ECE, EEE, Mechanical..." required>
-          </label>
-          <label>
-            Current / Pursuing Degree
-            <input type="text" name="degree" placeholder="B.Tech final year, Diploma, M.Tech..." required>
-          </label>
-          <label>
-            Project Requirement
-            <textarea name="message" rows="4" placeholder="Tell us what kind of project guidance you need" required></textarea>
-          </label>
-          <label>
-            Your Message
-            <textarea name="userMessage" rows="4" placeholder="Share anything else you want us to know"></textarea>
-          </label>
-          <div class="form-actions">
-            <button class="button button-primary" type="submit" id="submitLead">Submit Query</button>
-            <button class="button button-secondary" type="button" id="whatsappTrigger">Send on WhatsApp</button>
-          </div>
-          <p class="form-status" id="formStatus" aria-live="polite"></p>
-        </form>
-      </section>
-    </main>
-  </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="script.js"></script>
-</body>
+          <div class="hero-visual">
+            <div class="glow-card">
+              <img
+                src="assets/promo.jpeg"
+                alt="NextGen Engineering Solutions final year B.Tech project guidance poster"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="stats-grid" aria-label="Highlights">
+          <article class="stat-card">
+            <span>10+</span>
+            <p>
+              Years of experience in project guidance and practical
+              implementation.
+            </p>
+          </article>
+          <article class="stat-card">
+            <span>4+</span>
+            <p>
+              Core platforms including Arduino, Raspberry Pi, ESP32 / ESP8266,
+              and IoT systems.
+            </p>
+          </article>
+          <article class="stat-card">
+            <span>End-to-End</span>
+            <p>
+              Support from ideation and development to viva, documentation, and
+              placement readiness.
+            </p>
+          </article>
+        </section>
+
+        <section class="tech-marquee" aria-label="Technologies we support">
+          <div class="marquee-track">
+            <span>Arduino</span>
+            <span>Raspberry Pi</span>
+            <span>ESP32</span>
+            <span>Python</span>
+            <span>MATLAB</span>
+            <span>Embedded C</span>
+            <span>AI / ML</span>
+            <span>IoT Systems</span>
+            <span>PCB Printing</span>
+            <span>Drone Simulation</span>
+            <span>Arduino</span>
+            <span>Raspberry Pi</span>
+            <span>ESP32</span>
+            <span>Python</span>
+            <span>MATLAB</span>
+            <span>Embedded C</span>
+            <span>AI / ML</span>
+            <span>IoT Systems</span>
+            <span>PCB Printing</span>
+            <span>Drone Simulation</span>
+          </div>
+        </section>
+
+        <section class="slider-section" aria-label="Student project showcase">
+          <div class="slider-container">
+            <div class="slider-viewport">
+              <div class="slider-track" id="sliderTrack">
+                <article class="slider-item">
+                  <img
+                    src="assets/slider1.jpeg"
+                    alt="Student engineering project showcase slide one"
+                  />
+                  <div class="slider-overlay">
+                    <span class="slider-badge">Industry-ready finish</span>
+                    <div class="slider-copy">
+                      <h4>Presentation-first project execution</h4>
+                      <p>
+                        Structured builds with a premium look, cleaner output,
+                        and stronger first impressions for reviews and demos.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="slider-item">
+                  <img
+                    src="assets/slider2.jpeg"
+                    alt="Student engineering project showcase slide two"
+                  />
+                  <div class="slider-overlay">
+                    <span class="slider-badge">Real implementation</span>
+                    <div class="slider-copy">
+                      <h4>Hands-on systems with practical depth</h4>
+                      <p>
+                        Hardware, software, and embedded workflows shaped to
+                        feel credible, usable, and technically confident.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="slider-item">
+                  <img
+                    src="assets/slider3.jpeg"
+                    alt="Student engineering project showcase slide three"
+                  />
+                  <div class="slider-overlay">
+                    <span class="slider-badge">Viva-ready storytelling</span>
+                    <div class="slider-copy">
+                      <h4>Builds designed to explain themselves well</h4>
+                      <p>
+                        Clear visual quality, organized structure, and stronger
+                        confidence when students present their work.
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="slider-controls" aria-label="Slider controls">
+              <button
+                class="slider-btn"
+                id="sliderPrev"
+                type="button"
+                aria-label="Previous slide"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M14.7 5.3a1 1 0 0 1 0 1.4L10.41 11H20a1 1 0 1 1 0 2h-9.59l4.3 4.3a1 1 0 1 1-1.42 1.4l-6-6a1 1 0 0 1 0-1.4l6-6a1 1 0 0 1 1.41 0Z"
+                  />
+                </svg>
+              </button>
+              <button
+                class="slider-btn"
+                id="sliderNext"
+                type="button"
+                aria-label="Next slide"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M9.3 18.7a1 1 0 0 1 0-1.4L13.59 13H4a1 1 0 1 1 0-2h9.59l-4.3-4.3a1 1 0 1 1 1.42-1.4l6 6a1 1 0 0 1 0 1.4l-6 6a1 1 0 0 1-1.41 0Z"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div
+              class="slider-dots"
+              id="sliderDots"
+              aria-label="Slider pagination"
+            ></div>
+          </div>
+        </section>
+
+        <section class="about-section" id="about">
+          <div class="section-heading">
+            <p class="eyebrow">About Us</p>
+            <h3>
+              Transforming academic projects into industry-ready innovations
+            </h3>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-copy">
+              <p>
+                At NextGen Engineering Solutions, we are committed to
+                transforming academic projects into industry-ready innovations.
+                With a team of individuals having 10+ years of experience in
+                engineering domains such as MATLAB, IoT, Embedded Systems, AI,
+                and Data Analytics, we provide end-to-end project guidance
+                tailored for B.Tech students.
+              </p>
+              <p>
+                Our mission is to bridge the gap between theoretical knowledge
+                and real-world application by offering hands-on learning,
+                personalized mentorship, and practical exposure to modern
+                technologies.
+              </p>
+              <p>
+                We have successfully guided numerous students in developing
+                high-quality projects, improving their technical confidence, and
+                enhancing their career opportunities.
+              </p>
+            </div>
+
+            <article class="about-card">
+              <span class="card-icon">NG</span>
+              <h4>We Help You Build Your Career</h4>
+              <p>
+                We do not just guide projects. We help students build practical
+                skills, stronger presentations, and confidence for the next step
+                in their career.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="services-section" id="services">
+          <div class="section-heading">
+            <p class="eyebrow">Services</p>
+            <h3>
+              Domains, technologies, and support built around real student
+              outcomes
+            </h3>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card service-card-tall">
+              <span class="card-icon">EC</span>
+              <h4>Domains Covered</h4>
+              <ul>
+                <li>Electronics &amp; Communication</li>
+                <li>Computer Science (AI/ML)</li>
+                <li>Electrical Engineering</li>
+                <li>IoT &amp; Smart Systems</li>
+                <li>Data Analysis &amp; Visualization</li>
+              </ul>
+            </article>
+
+            <article class="service-card service-card-tall">
+              <span class="card-icon">HW</span>
+              <h4>Platforms</h4>
+              <ul>
+                <li>Arduino</li>
+                <li>Raspberry Pi</li>
+                <li>ESP32 / ESP8266</li>
+                <li>IoT Systems</li>
+              </ul>
+            </article>
+
+            <article class="service-card service-card-tall">
+              <span class="card-icon">SW</span>
+              <h4>Technologies</h4>
+              <ul>
+                <li>Python</li>
+                <li>MATLAB</li>
+                <li>Embedded C</li>
+                <li>3D Printing</li>
+                <li>Customised PCB Printing</li>
+                <li>Drone Simulation</li>
+              </ul>
+            </article>
+
+            <article class="service-card service-card-feature">
+              <span class="card-icon">OK</span>
+              <h4>Features</h4>
+              <ul>
+                <li>End-to-End Project Support</li>
+                <li>Real-Time Implementation</li>
+                <li>Viva &amp; Documentation Guidance</li>
+                <li>Resume &amp; Placement Support</li>
+              </ul>
+            </article>
+
+            <article class="service-card service-card-feature feature-callout">
+              <span class="card-icon">PG</span>
+              <h4>Special Guidance</h4>
+              <ul>
+                <li>Mini + Major Projects</li>
+                <li>DIY &amp; Innovation-Based Learning</li>
+                <li>Publication Guidance</li>
+              </ul>
+            </article>
+
+            <article class="service-card service-card-story">
+              <span class="card-icon">NG</span>
+              <h4>Why Students Choose NextGen</h4>
+              <p>
+                We blend technical mentoring with practical execution so
+                students can present stronger projects, understand their work
+                deeply, and build confidence for interviews, reviews, and
+                placements.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="gallery-section" aria-label="Project Gallery">
+          <div class="section-heading">
+            <p class="eyebrow">Project Gallery</p>
+            <h3>Visual project tracks for practical engineering builds</h3>
+          </div>
+
+          <div class="gallery-grid">
+            <article class="gallery-card">
+              <img
+                src="assets/project-ai.svg"
+                alt="AI and machine learning project illustration"
+              />
+              <div>
+                <span>AI / ML</span>
+                <h4>Data-driven final year projects</h4>
+              </div>
+            </article>
+            <article class="gallery-card">
+              <img
+                src="assets/project-iot.svg"
+                alt="IoT systems project illustration"
+              />
+              <div>
+                <span>IoT Systems</span>
+                <h4>Connected hardware and sensor builds</h4>
+              </div>
+            </article>
+            <article class="gallery-card">
+              <img
+                src="assets/project-pcb.svg"
+                alt="PCB design project illustration"
+              />
+              <div>
+                <span>PCB Design</span>
+                <h4>Embedded circuits and custom boards</h4>
+              </div>
+            </article>
+            <article class="gallery-card">
+              <img
+                src="assets/project-drone.svg"
+                alt="Drone simulation project illustration"
+              />
+              <div>
+                <span>Drone Simulation</span>
+                <h4>Control systems and flight simulation</h4>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="process-section" aria-label="Process">
+          <div class="section-heading">
+            <p class="eyebrow">How We Work</p>
+            <h3>A guided path from idea to final presentation</h3>
+          </div>
+
+          <div class="process-grid">
+            <article class="process-card">
+              <strong>01</strong>
+              <h4>Project Planning</h4>
+              <p>
+                Select the right domain, define your scope, and shape an
+                innovation-focused concept.
+              </p>
+            </article>
+            <article class="process-card">
+              <strong>02</strong>
+              <h4>Build &amp; Implement</h4>
+              <p>
+                Develop hardware, software, AI/ML, embedded systems, or IoT
+                solutions with real-time support.
+              </p>
+            </article>
+            <article class="process-card">
+              <strong>03</strong>
+              <h4>Document &amp; Present</h4>
+              <p>
+                Get help with reports, viva preparation, publication guidance,
+                and placement-ready storytelling.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section
+          class="process-section automation-section"
+          aria-label="Automation Pipeline"
+        >
+          <div class="section-heading">
+            <p class="eyebrow">Automation Layer</p>
+            <h3>
+              Website form to Google Sheets, follow-up, and student tracking
+            </h3>
+          </div>
+
+          <div class="pipeline-grid">
+            <article class="pipeline-card">
+              <strong>01</strong>
+              <h4>Website Form</h4>
+              <p>
+                Students submit their name, contact, branch, degree, domain, and
+                project requirement from the website.
+              </p>
+            </article>
+            <article class="pipeline-card">
+              <strong>02</strong>
+              <h4>Google Forms / Custom Form</h4>
+              <p>
+                The contact form can connect to a Google Apps Script endpoint or
+                an embedded Google Form flow.
+              </p>
+            </article>
+            <article class="pipeline-card">
+              <strong>03</strong>
+              <h4>Google Sheets Database</h4>
+              <p>
+                Every form entry is stored in Google Sheets with timestamps for
+                lead tracking and student follow-up.
+              </p>
+            </article>
+            <article class="pipeline-card">
+              <strong>04</strong>
+              <h4>Automation Layer</h4>
+              <p>
+                Apps Script can trigger confirmation emails, WhatsApp workflow
+                hooks, and status updates automatically.
+              </p>
+            </article>
+            <article class="pipeline-card">
+              <strong>05</strong>
+              <h4>WhatsApp + Email + Lead Tracking</h4>
+              <p>
+                Track discussions, send quick replies, and monitor enquiry
+                status for in-progress or completed projects.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+          <div class="section-heading">
+            <p class="eyebrow">Contact Us</p>
+            <h3>
+              Start your final year project with a strong technical partner
+            </h3>
+          </div>
+
+          <div class="contact-grid">
+            <article class="contact-card">
+              <h4>Email</h4>
+              <a href="mailto:nextgenengineeringsolutions.p@gmail.com"
+                >nextgenengineeringsolutions.p@gmail.com</a
+              >
+            </article>
+            <article class="contact-card">
+              <h4>WhatsApp</h4>
+              <a
+                href="https://wa.me/918789967749"
+                target="_blank"
+                rel="noreferrer"
+                >+91 87899 67749</a
+              >
+            </article>
+            <article class="contact-card">
+              <h4>Best For</h4>
+              <p>
+                Final year B.Tech students looking for practical, impressive,
+                and presentation-ready projects.
+              </p>
+            </article>
+          </div>
+
+          <form class="contact-form" id="leadForm">
+            <div class="form-intro">
+              <p class="eyebrow">Website Form</p>
+              <h4>Tell us about your project idea</h4>
+              <p>
+                Your entry can be recorded in Google Sheets and followed up
+                through WhatsApp, email, and lead tracking.
+              </p>
+            </div>
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+            <label>
+              Phone or WhatsApp
+              <input
+                type="text"
+                name="phone"
+                placeholder="Your contact number"
+                required
+              />
+            </label>
+            <label>
+              Email
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email address"
+              />
+            </label>
+            <label>
+              Domain
+              <input
+                type="text"
+                name="domain"
+                placeholder="AI/ML, IoT, Embedded, Electrical..."
+                required
+              />
+            </label>
+            <label>
+              Branch
+              <input
+                type="text"
+                name="branch"
+                placeholder="CSE, ECE, EEE, Mechanical..."
+                required
+              />
+            </label>
+            <label>
+              Current / Pursuing Degree
+              <input
+                type="text"
+                name="degree"
+                placeholder="B.Tech final year, Diploma, M.Tech..."
+                required
+              />
+            </label>
+            <label>
+              Project Requirement
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="Tell us what kind of project guidance you need"
+                required
+              ></textarea>
+            </label>
+            <label>
+              Your Message
+              <textarea
+                name="userMessage"
+                rows="4"
+                placeholder="Share anything else you want us to know"
+              ></textarea>
+            </label>
+            <div class="form-actions">
+              <button
+                class="button button-primary"
+                type="submit"
+                id="submitLead"
+              >
+                Submit Query
+              </button>
+              <button
+                class="button button-secondary"
+                type="button"
+                id="whatsappTrigger"
+              >
+                Send on WhatsApp
+              </button>
+            </div>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
